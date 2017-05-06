@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+ <html>
+ <head lang="en">
+     <meta charset="UTF-8">
+     <title></title>
+     <link rel="stylesheet" type="text/css" href="css/chat.css" />
+ </head>
+ <body class="keBody">
+ <ul class="pages" id="nameHide">
+     <li class="login page">
+         <div class="form">
+             <h3 class="title">yourname?</h3>
+             <input id="usernameInput" class="usernameInput" type="text" maxlength="14" />
+             <span style="font-size: 200%" id="ok" >ok</span>
+         </div>
+     </li>
+ </ul>
+ <div id="speackPage" style="display:none">
+ <h1 class="keTitle">node+socket在线聊天</h1>
+ <div class="kePublic">
+     <!--效果html开始-->
+     <div class="content">
+         <div class="chatBox">
+             <div class="chatLeft">
+                 <div class="chat01">
+                     <div class="chat01_title">
+                         <ul class="talkTo">
+                             <li><a href="javascript:;" id="onlineName"></a></li>
+                             <li><a href="javascript:;">当前在线人数：<span id="onlineNum"></span></a></li>
+                             <li style="display: none" id="onlinetx"><a href="javascript:;"><span id="whoonline"></span>上线了-><-</a></li>
+                             <li style="display: none" id="onxiaxian"><a href="javascript:;"><span id="whoxiaxian"></span>下线了-><-</a></li>
+                         </ul>
+                         <a class="close_btn" href="javascript:;"></a>
+                     </div>
+                     <div class="chat01_content" id="topic" style="margin-top: 5px;">
+
+                     </div>
+                 </div>
+                 <div class="chat02">
+                     <div class="chat02_title">
+
+                     </div>
+                     <div class="chat02_content">
+                         <textarea id="inputName"></textarea>
+                     </div>
+                     <div class="chat02_bar">
+                         <ul>
+                             <li style="right: 5px; top: 5px;"><a href="javascript:;" id="tj">
+                                 <img src="img/send_btn.jpg"></a></li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+             <div class="chatRight">
+                 <div class="chat03">
+                     <div class="chat03_title">
+                         <label class="chat03_title_t">
+                             成员列表</label>
+                     </div>
+                     <div class="chat03_content">
+                         <ul id="chenyuanlist">
+
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+             <div style="clear: both;">
+             </div>
+         </div>
+     </div>
+     <!--效果html结束-->
+ </div>
+ </div>
+ <script src="js/socket.io.js"></script>
+ <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+ <script type="text/javascript" src="js/index.js"></script>
+ </body>
+ </html>
